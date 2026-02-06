@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Worldle Definer",
+    "version": "1.0",
+    "description": "Provides definitions for Worldle game.",
+   "content_scripts": [
+    {
+      "matches": ["*://www.nytimes.com/games/wordle/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "permissions": []
+}
