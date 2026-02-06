@@ -1,14 +1,20 @@
 {
-    "manifest_version": 3,
-    "name": "Worldle Definer",
-    "version": "1.0",
-    "description": "Provides definitions for Worldle game.",
-   "content_scripts": [
+  "manifest_version": 3,
+  "name": "Wordle Definer (Dict.org)",
+  "version": "4.0",
+  "description": "Displays definitions using Dict.org.",
+  "permissions": [],
+  "host_permissions": [
+    "https://dict.org/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
     {
       "matches": ["*://www.nytimes.com/games/wordle/*"],
       "js": ["content.js"],
       "css": ["styles.css"]
     }
-  ],
-  "permissions": []
+  ]
 }

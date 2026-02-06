@@ -1,0 +1,91 @@
+/* styles.css */
+
+.wd-container {
+    position: fixed;
+    top: 15%; /* Moved up slightly */
+    right: 20px;
+    width: 350px; /* Slightly wider for the raw text */
+    max-height: 400px; /* Limit height */
+    background-color: #ffffff;
+    border: 1px solid #d3d6da;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 9999;
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    color: #1a1a1b;
+    display: flex;
+    flex-direction: column;
+}
+
+.wd-scroll-area {
+    overflow-y: auto; /* Allow scrolling if definition is long */
+    flex-grow: 1;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* This preserves the Dict.org formatting */
+.wd-def-raw {
+    font-family: 'Courier New', Courier, monospace; /* Monospace looks best for Dict.org */
+    font-size: 0.85rem;
+    white-space: pre-wrap; /* KEEPS NEWLINES AND SPACES */
+    line-height: 1.4;
+    color: #333;
+}
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    .wd-container {
+        background-color: #121213;
+        color: #ffffff;
+        border-color: #3a3a3c;
+    }
+}
+
+.wd-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d3d6da;
+    padding-bottom: 8px;
+}
+
+.wd-word {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.wd-pos {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #787c7e;
+    margin-left: 8px;
+    flex-grow: 1;
+}
+
+.wd-def {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.wd-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #787c7e;
+}
+
+.wd-more {
+    font-size: 0.85rem;
+    color: #6aaa64; /* Wordle Green */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.wd-more:hover {
+    text-decoration: underline;
+}
